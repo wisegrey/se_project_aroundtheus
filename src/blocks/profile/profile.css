@@ -1,0 +1,32 @@
+.profile{
+    display: grid;
+    width: 100%;
+    margin: 40px auto 0;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: min-content max-content auto 1fr;
+    grid-template-areas:
+    "avatar name edit add"
+    "avatar occupation occupation add";
+    align-items: center;
+}
+
+@media (max-width: 950px){
+      .profile{
+        max-width: 92.6%;
+      }
+}
+
+@media (max-width: 808px){
+    .profile{
+      max-width: calc(320px - 19px * 2);
+      justify-content: center;
+      margin-top: 42px;
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: repeat(4, min-content);
+      grid-template-areas:
+      "avatar avatar"
+      "name edit"
+      "occupation occupation"
+      "add add";
+    }
+  }

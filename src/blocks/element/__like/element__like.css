@@ -1,0 +1,17 @@
+.element__like{
+    margin: 0 0 0 auto;
+    padding: 0;
+    height: 19px;
+    width: 21px;
+    background: url(../../../img/like.svg);
+    border: none;
+    transition-property: opacity;
+    transition-delay: 0.08s;
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.element__like:hover{
+    opacity: 0.5;
+}
