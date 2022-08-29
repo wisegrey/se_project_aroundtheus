@@ -34,13 +34,15 @@ const openAddPopup = document.querySelector(".profile__add");
 
 const formValidators = {};
 
+const renderCard = (card) => { 
+  const cardElement = createCard(card);
+  cardList.addItem(cardElement);
+}
+
 const cardList = new Section(
   {
     items: initialCards,
-    renderer: (data) => {
-      const cardElement = createCard(data);
-      cardList.addItem(cardElement);
-    },
+    renderer: renderCard,
   },
   elementsList
 );
@@ -60,11 +62,10 @@ const userInfoPopup = new PopupWithForm(editPopup, (data) => {
 });
 
 const newCardPopup = new PopupWithForm(addPopup, (data) => {
-  const cardElement = createCard({
-    name: data.title,
-    link: data["imageUrl"],
+  renderCard({ 
+    name: data.title, 
+    link: data["imageUrl"], 
   });
-  cardList.addItem(cardElement);
   newCardPopup.close();
 });
 
