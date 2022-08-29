@@ -4,11 +4,7 @@ class Card {
       this._link = data.link;
       this._handleCardClick = handleCardClick;
       this._cardSelector = cardSelector;
-      this._element = this._getTemplate();
-      this._likeBtn = this._element.querySelector(".element__like");
-      this._cardImage = this._element.querySelector(".element__image");
-      this._deleteBtn = this._element.querySelector(".element__delete");
-      this._text = this._element.querySelector(".element__name");
+      
     }
   
 
@@ -41,6 +37,11 @@ class Card {
   
 
     generateCard() {
+      this._element = this._getTemplate();
+      this._likeBtn = this._element.querySelector(".element__like");
+      this._cardImage = this._element.querySelector(".element__image");
+      this._deleteBtn = this._element.querySelector(".element__delete");
+      this._text = this._element.querySelector(".element__name");
       this._cardImage.src = this._link;
       this._cardImage.alt = this._name;
       this._text.textContent = this._name;
