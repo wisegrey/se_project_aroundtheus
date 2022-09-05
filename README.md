@@ -17,4 +17,4 @@ Used technologies:
 
 ### Link to project page
 
-[Web Project 4](https://wisegrey.github.io/web_project_4/)
+[Web Project 4](https://wisegrey.github.io/se_project_aroundtheus/)
